@@ -35,9 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/ProyectoIntegracion/Coordinate.o \
-	${OBJECTDIR}/ProyectoIntegracion/Map.o \
-	${OBJECTDIR}/ProyectoIntegracion/main.o
+	${OBJECTDIR}/Coordinate.o \
+	${OBJECTDIR}/Map.o \
+	${OBJECTDIR}/main.o
 
 
 # C Compiler Flags
@@ -58,26 +58,26 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyecto_de_integracion.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyectointegracion.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyecto_de_integracion.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyectointegracion.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyecto_de_integracion ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyectointegracion ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/ProyectoIntegracion/Coordinate.o: ProyectoIntegracion/Coordinate.cpp 
-	${MKDIR} -p ${OBJECTDIR}/ProyectoIntegracion
+${OBJECTDIR}/Coordinate.o: Coordinate.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ProyectoIntegracion/Coordinate.o ProyectoIntegracion/Coordinate.cpp
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Coordinate.o Coordinate.cpp
 
-${OBJECTDIR}/ProyectoIntegracion/Map.o: ProyectoIntegracion/Map.cpp 
-	${MKDIR} -p ${OBJECTDIR}/ProyectoIntegracion
+${OBJECTDIR}/Map.o: Map.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ProyectoIntegracion/Map.o ProyectoIntegracion/Map.cpp
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Map.o Map.cpp
 
-${OBJECTDIR}/ProyectoIntegracion/main.o: ProyectoIntegracion/main.cpp 
-	${MKDIR} -p ${OBJECTDIR}/ProyectoIntegracion
+${OBJECTDIR}/main.o: main.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ProyectoIntegracion/main.o ProyectoIntegracion/main.cpp
+	$(COMPILE.cc) -O2 -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:
@@ -85,7 +85,7 @@ ${OBJECTDIR}/ProyectoIntegracion/main.o: ProyectoIntegracion/main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyecto_de_integracion.exe
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/proyectointegracion.exe
 
 # Subprojects
 .clean-subprojects:

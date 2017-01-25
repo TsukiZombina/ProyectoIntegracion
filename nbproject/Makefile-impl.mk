@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Proyecto de Integracion
+PROJECTNAME=ProyectoIntegracion
 
 # Active Configuration
 DEFAULTCONF=Debug

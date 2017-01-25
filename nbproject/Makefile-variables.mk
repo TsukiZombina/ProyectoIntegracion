@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=MinGW-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW-Windows
-CND_ARTIFACT_NAME_Debug=proyecto_de_integracion
-CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/proyecto_de_integracion
+CND_ARTIFACT_NAME_Debug=proyectointegracion
+CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/proyectointegracion
 CND_PACKAGE_DIR_Debug=dist/Debug/MinGW-Windows/package
-CND_PACKAGE_NAME_Debug=proyectodeintegracion.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/proyectodeintegracion.tar
+CND_PACKAGE_NAME_Debug=proyectointegracion.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/proyectointegracion.tar
 # Release configuration
 CND_PLATFORM_Release=MinGW-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/MinGW-Windows
-CND_ARTIFACT_NAME_Release=proyecto_de_integracion
-CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/proyecto_de_integracion
+CND_ARTIFACT_NAME_Release=proyectointegracion
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/proyectointegracion
 CND_PACKAGE_DIR_Release=dist/Release/MinGW-Windows/package
-CND_PACKAGE_NAME_Release=proyectodeintegracion.tar
-CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/proyectodeintegracion.tar
+CND_PACKAGE_NAME_Release=proyectointegracion.tar
+CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/proyectointegracion.tar
 #
 # include compiler specific variables
 #

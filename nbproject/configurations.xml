@@ -4,8 +4,8 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>ProyectoIntegracion/Coordinate.h</itemPath>
-      <itemPath>ProyectoIntegracion/Map.h</itemPath>
+      <itemPath>Coordinate.h</itemPath>
+      <itemPath>Map.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -14,9 +14,9 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>ProyectoIntegracion/Coordinate.cpp</itemPath>
-      <itemPath>ProyectoIntegracion/Map.cpp</itemPath>
-      <itemPath>ProyectoIntegracion/main.cpp</itemPath>
+      <itemPath>Coordinate.cpp</itemPath>
+      <itemPath>Map.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -43,15 +43,15 @@
           <standard>11</standard>
         </ccTool>
       </compileType>
-      <item path="ProyectoIntegracion/Coordinate.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Coordinate.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="ProyectoIntegracion/Coordinate.h" ex="false" tool="3" flavor2="0">
+      <item path="Coordinate.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="ProyectoIntegracion/Map.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Map.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="ProyectoIntegracion/Map.h" ex="false" tool="3" flavor2="0">
+      <item path="Map.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="ProyectoIntegracion/main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -75,15 +75,15 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="ProyectoIntegracion/Coordinate.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Coordinate.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="ProyectoIntegracion/Coordinate.h" ex="false" tool="3" flavor2="0">
+      <item path="Coordinate.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="ProyectoIntegracion/Map.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Map.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="ProyectoIntegracion/Map.h" ex="false" tool="3" flavor2="0">
+      <item path="Map.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="ProyectoIntegracion/main.cpp" ex="false" tool="1" flavor2="0">
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>
