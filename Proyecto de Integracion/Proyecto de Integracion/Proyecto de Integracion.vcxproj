@@ -110,13 +110,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\Coordinate.h" />
-    <ClInclude Include="..\Map.h" />
+    <ClInclude Include="..\..\Coordinate.h" />
+    <ClInclude Include="..\..\Map.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Coordinate.cpp" />
-    <ClCompile Include="..\main.cpp" />
-    <ClCompile Include="..\Map.cpp" />
+    <ClCompile Include="..\..\Coordinate.cpp" />
+    <ClCompile Include="..\..\main.cpp" />
+    <ClCompile Include="..\..\Map.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
