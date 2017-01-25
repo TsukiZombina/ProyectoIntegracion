@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\ProyectoIntegracion\Coordinate.h">
+    <ClInclude Include="..\Coordinate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\ProyectoIntegracion\Map.h">
+    <ClInclude Include="..\Map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\ProyectoIntegracion\Coordinate.cpp">
+    <ClCompile Include="..\Coordinate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\ProyectoIntegracion\main.cpp">
+    <ClCompile Include="..\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\ProyectoIntegracion\Map.cpp">
+    <ClCompile Include="..\Map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
