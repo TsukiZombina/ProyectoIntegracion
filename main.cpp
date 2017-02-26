@@ -12,6 +12,7 @@
  */
 
 #include <cstdlib>
+#include <vector>
 
 using namespace std;
 
@@ -19,7 +20,7 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-
+    std::vector<int> vec;
     return 0;
 }
 

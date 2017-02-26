@@ -16,6 +16,8 @@
 
 class Coordinate {
 public:
+    double x;
+    double y;
     Coordinate();
     Coordinate(const Coordinate& orig);
     virtual ~Coordinate();

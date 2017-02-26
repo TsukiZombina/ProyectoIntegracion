@@ -12,11 +12,22 @@
  */
 
 #include "Map.h"
+#include "Coordinate.h"
+#include <fstream>
 
-Map::Map() {
-}
-
-Map::Map(const Map& orig) {
+Map::Map(const char* filename) {
+    int n;
+    Coordinate coordinate;
+    std::ifstream infile;
+    infile.open (filename);
+    getline(infile,n);
+    while(!infile.eof) // To get you all the lines.
+    {
+        infile >> coordinate.x >> coordinate.y;
+        map.push_back(coordinate);
+        
+    }
+    infile.close();
 }
 
 Map::~Map() {

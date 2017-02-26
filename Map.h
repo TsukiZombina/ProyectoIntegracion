@@ -14,13 +14,15 @@
 #ifndef MAP_H
 #define MAP_H
 
+#include "Coordinate.h"
+#include <vector>
+
 class Map {
 public:
-    Map();
-    Map(const Map& orig);
+    Map(const char* filename);
     virtual ~Map();
 private:
-
+    std::vector<Coordinate> map;
 };
 
 #endif /* MAP_H */
