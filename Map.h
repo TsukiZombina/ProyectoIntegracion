@@ -16,11 +16,20 @@
 
 #include "Coordinate.h"
 #include <vector>
+#include <fstream>
+#include <algorithm>
+#include <cmath>
+
+#define PI 3.14159265358979323846
 
 class Map {
 public:
     Map(const char* filename);
     virtual ~Map();
+    std::vector<Coordinate>& sortX(std::vector<Coordinate>&);
+    std::vector<Coordinate>& sortY(std::vector<Coordinate>&);
+    std::vector<Coordinate>& sortXY(std::vector<Coordinate>&);
+    std::vector<Coordinate>& sortYX(std::vector<Coordinate>&);
 private:
     std::vector<Coordinate> map;
 };

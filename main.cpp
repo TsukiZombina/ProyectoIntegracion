@@ -11,16 +11,21 @@
  * Created on January 24, 2017, 11:56 PM
  */
 
-#include <cstdlib>
 #include <vector>
+#include <iostream>
 
-using namespace std;
+#include "Map.h"
 
 /*
  * 
  */
 int main(int argc, char** argv) {
-    std::vector<int> vec;
+    Map map("x01f.rnd");
+    std::vector<Coordinate> mapxy;
+    map.sortXY(mapxy);
+    for(auto& coord: mapxy){
+        std::cout << coord.x << " " << coord.y << std::endl;
+    }
     return 0;
 }
 

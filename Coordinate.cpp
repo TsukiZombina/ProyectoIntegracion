@@ -14,9 +14,8 @@
 #include "Coordinate.h"
 
 Coordinate::Coordinate() {
-}
-
-Coordinate::Coordinate(const Coordinate& orig) {
+    x = 0.0;
+    y = 0.0;
 }
 
 Coordinate::~Coordinate() {

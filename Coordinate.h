@@ -19,10 +19,9 @@ public:
     double x;
     double y;
     Coordinate();
-    Coordinate(const Coordinate& orig);
+    Coordinate(double a, double b):x(a),y(b){}
     virtual ~Coordinate();
 private:
-
 };
 
 #endif /* COORDINATE_H */
