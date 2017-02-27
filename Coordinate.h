@@ -14,13 +14,15 @@
 #ifndef COORDINATE_H
 #define COORDINATE_H
 
+#include <cmath>
+
 class Coordinate {
 public:
     double x;
     double y;
     Coordinate();
     Coordinate(double a, double b):x(a),y(b){}
-    virtual ~Coordinate();
+    double computeDistance(Coordinate);
 private:
 };
 

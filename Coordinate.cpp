@@ -11,6 +11,8 @@
  * Created on January 24, 2017, 11:55 PM
  */
 
+#include <complex>
+
 #include "Coordinate.h"
 
 Coordinate::Coordinate() {
@@ -18,6 +20,7 @@ Coordinate::Coordinate() {
     y = 0.0;
 }
 
-Coordinate::~Coordinate() {
+double Coordinate::computeDistance(Coordinate a){
+    return std::sqrt(std::pow((a.x - this->x),2) + std::pow((a.y - this->y),2));
 }
 

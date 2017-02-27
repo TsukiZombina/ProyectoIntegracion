@@ -17,11 +17,11 @@
 #include "Coordinate.h"
 #include <utility>
 #include <vector>
-#include <list>
 
 class Match {
 public:
-    std::list<std::pair<Coordinate, Coordinate>>& computeWindrose(std::vector<Coordinate>&, std::list<std::pair<Coordinate, Coordinate>>&);
+    std::vector<std::pair<Coordinate, Coordinate>>& computeWindrose(std::vector<Coordinate>&, std::vector<std::pair<Coordinate, Coordinate>>&);
+    std::vector<std::pair<Coordinate, Coordinate>>& computeConvexHull(std::vector<Coordinate>&, std::vector<std::pair<Coordinate, Coordinate>>&);
 private:
 };
 

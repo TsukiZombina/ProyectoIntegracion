@@ -13,7 +13,7 @@
 
 #include "Match.h"
 
-std::list<std::pair<Coordinate, Coordinate>>& Match::computeWindrose(std::vector<Coordinate>& sortedMap, std::list<std::pair<Coordinate, Coordinate> >& matches){
+std::vector<std::pair<Coordinate, Coordinate>>& Match::computeWindrose(std::vector<Coordinate>& sortedMap, std::vector<std::pair<Coordinate, Coordinate> >& matches){
     std::pair<Coordinate, Coordinate> match;
     for(auto it = sortedMap.begin(); it != sortedMap.end(); it++){
         match.first = *it;
