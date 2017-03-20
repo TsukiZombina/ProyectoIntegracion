@@ -26,39 +26,45 @@ Map::Map(const char* filename) {
 //        std::cout << map.back().x << " " << map.back().y << " mapa" << n <<std::endl;
     }
     infile.close();
+    sortAlg[0] = &Map::sortX;
+    sortAlg[1] = &Map::sortY;
+    sortAlg[2] = &Map::sortXY;
+    sortAlg[3] = &Map::sortYX;
 }
 
 Map::~Map() {
 }
 
-std::vector<Coordinate>& Map::sortX(std::vector<Coordinate>& points){
-    points = map;
-    std::sort(points.begin(), points.end(), [](const Coordinate& a, const Coordinate& b) -> bool{
+Map::SortAlgorithm* Map::getSortAlgorithm() {
+    return sortAlg;
+}
+
+void Map::sortX(){
+    std::sort(map.begin(), map.end(), [](const Coordinate& a, const Coordinate& b) -> bool{
         return a.x < b.x;
     });
-    return points;
 }
 
-std::vector<Coordinate>& Map::sortY(std::vector<Coordinate>& points){
-    points = map;
-    std::sort(points.begin(), points.end(), [](const Coordinate& a, const Coordinate& b) -> bool{
+void Map::sortY(){
+    std::sort(map.begin(), map.end(), [](const Coordinate& a, const Coordinate& b) -> bool{
         return a.y < b.y;
     });
-    return points;
 }
 
-std::vector<Coordinate>& Map::sortXY(std::vector<Coordinate>& points){
-    points = map;
-    std::sort(points.begin(), points.end(), [](const Coordinate& a, const Coordinate& b) -> bool{
+void Map::sortXY(){
+    std::sort(map.begin(), map.end(), [](const Coordinate& a, const Coordinate& b) -> bool{
         return (a.x*cos(315*PI/180) - a.y*sin(315*PI/180)) < (b.x*cos(315*PI/180) - b.y*sin(315*PI/180));
     });
-    return points;
 }
 
-std::vector<Coordinate>& Map::sortYX(std::vector<Coordinate>& points){
-    points = map;
-    std::sort(points.begin(), points.end(), [](const Coordinate& a, const Coordinate& b) -> bool{
+void Map::sortYX(){
+    std::sort(map.begin(), map.end(), [](const Coordinate& a, const Coordinate& b) -> bool{
         return (a.x*sin(315*PI/180) + a.y*cos(315*PI/180)) < (b.x*sin(315*PI/180) + b.y*cos(315*PI/180));
     });
-    return points;
+}
+
+void Map::sortXthenY(){
+    std::sort(map.begin(), map.end(), [](const Coordinate& a, const Coordinate& b) -> bool{
+        return (a.x < b.x || (a.x == b.x && a.y < b.y));
+    });
 }

@@ -14,15 +14,27 @@
 #ifndef MATCH_H
 #define MATCH_H
 
-#include "Coordinate.h"
+#include "Map.h"
 #include <utility>
 #include <vector>
+#include <string>
+#include <algorithm>
+
+typedef std::vector<std::pair<Coordinate, Coordinate> > MatchSet;
 
 class Match {
 public:
-    std::vector<std::pair<Coordinate, Coordinate>>& computeWindrose(std::vector<Coordinate>&, std::vector<std::pair<Coordinate, Coordinate>>&);
-    std::vector<std::pair<Coordinate, Coordinate>>& computeConvexHull(std::vector<Coordinate>&, std::vector<std::pair<Coordinate, Coordinate>>&);
+    Match(const char*);
+    
+    void computeWindroseMatches();
+    void computeConvexHullMatches();
+    void makeMatch(MatchSet& matchSet);
 private:
+    Map map;
+    std::string filename;
+    
+    void saveData(MatchSet&);
+    double totalDistance(MatchSet&);
 };
 
 #endif /* MATCH_H */

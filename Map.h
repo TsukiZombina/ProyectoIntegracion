@@ -19,19 +19,31 @@
 #include <fstream>
 #include <algorithm>
 #include <cmath>
+#include <functional>
 
 #define PI 3.14159265358979323846
+
+typedef std::vector<Coordinate> CoordinateSet;
+typedef std::vector<Coordinate>::iterator CoordinateSetIterator;
 
 class Map {
 public:
     Map(const char* filename);
+    
     virtual ~Map();
-    std::vector<Coordinate>& sortX(std::vector<Coordinate>&);
-    std::vector<Coordinate>& sortY(std::vector<Coordinate>&);
-    std::vector<Coordinate>& sortXY(std::vector<Coordinate>&);
-    std::vector<Coordinate>& sortYX(std::vector<Coordinate>&);
+    void sortX();
+    void sortY();
+    void sortXY();
+    void sortYX();
+    void sortXthenY();
+    typedef std::function<void(Map&)> SortAlgorithm;
+    CoordinateSetIterator begin(){return map.begin();}
+    CoordinateSetIterator end(){return map.end();}
+    SortAlgorithm* getSortAlgorithm();
+    
 private:
-    std::vector<Coordinate> map;
+    CoordinateSet map;
+    SortAlgorithm sortAlg[4];
 };
 
 #endif /* MAP_H */
