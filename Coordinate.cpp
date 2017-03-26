@@ -24,3 +24,8 @@ double Coordinate::computeDistance(Coordinate a){
     return std::sqrt(std::pow((a.x - this->x),2) + std::pow((a.y - this->y),2));
 }
 
+bool Coordinate::operator==(const Coordinate & rhs)
+{
+	return this->x == rhs.x && this ->y == rhs.y;
+}
+

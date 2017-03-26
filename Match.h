@@ -19,6 +19,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include "ConvexHull.h"
 
 typedef std::vector<std::pair<Coordinate, Coordinate> > MatchSet;
 
@@ -28,12 +29,13 @@ public:
     
     void computeWindroseMatches();
     void computeConvexHullMatches();
-    void makeMatch(MatchSet& matchSet);
+	void makeMatch(MatchSet&);
+	void makeMatch(MatchSet&, CoordinateSet&);
 private:
     Map map;
     std::string filename;
     
-    void saveData(MatchSet&);
+    void saveData(MatchSet&, const char* extension);
     double totalDistance(MatchSet&);
 };
 

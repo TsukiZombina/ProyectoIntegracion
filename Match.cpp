@@ -26,6 +26,19 @@ void Match::makeMatch(MatchSet& matchSet) {
     }
 }
 
+void Match::makeMatch(MatchSet & matchSet, CoordinateSet & convexHull)
+{
+	std::pair<Coordinate, Coordinate> match;
+	for (auto it = map.begin(); it != map.end() - 1; it++) {
+		match.first = *it;
+		match.second = *(it + 1);
+		matchSet.push_back(match);
+	}
+	match.first = map.getCoordinateSet().back();
+	match.second = map.getCoordinateSet().front();
+	matchSet.push_back(match);
+}
+
 double Match::totalDistance(MatchSet& matchSet) {
     double totalDist = 0.0;
     for(auto& match: matchSet){
@@ -34,8 +47,8 @@ double Match::totalDistance(MatchSet& matchSet) {
     return totalDist;
 }
 
-void Match::saveData(MatchSet& matches) {
-    std::string result = filename + ".wr";
+void Match::saveData(MatchSet& matches, const char* extension) {
+    std::string result = filename + extension;
     std::ofstream ofs(result.c_str());
     if(ofs.is_open()) { 
         for(auto& match: matches)
@@ -69,6 +82,31 @@ void Match::computeWindroseMatches(){
     distances[3] = totalDistance(matchSets[3]);
 */
     int matchSetIndex = std::distance(distances, std::max_element(distances, distances + 3));
-    saveData(matchSets[matchSetIndex]);
+    saveData(matchSets[matchSetIndex], ".wr");
+}
+
+void Match::computeConvexHullMatches()
+{
+	CoordinateSet convexHull;
+	ConvexHull ch;
+	MatchSet convexHullMatches, maxMatches;
+	
+	int lenght = map.getCoordinateSet().size() / 2;
+
+	for (int i = 0; i < lenght ; i++, convexHullMatches.clear())
+	{
+		ch(map, convexHull);
+		makeMatch(convexHullMatches, convexHull);
+		auto it = std::max_element(convexHullMatches.begin(), convexHullMatches.end(), [](std::pair<Coordinate, Coordinate> lhs, std::pair<Coordinate, Coordinate> rhs) -> bool {
+			return lhs.first.computeDistance(lhs.second) < rhs.first.computeDistance(rhs.second);
+		});
+		maxMatches.push_back(*it);
+		auto first = std::find(map.begin(), map.end(), it->first);
+		map.erase(first);
+		auto second = std::find(map.begin(), map.end(), it->second);
+		map.erase(second);
+		// TODO: change delete by pop_back
+	}
+	saveData(maxMatches, ".ch");
 }
 

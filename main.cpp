@@ -24,6 +24,7 @@
 int main(int argc, char** argv) {
     Match match("x01f.rnd");
     match.computeWindroseMatches();
+	match.computeConvexHullMatches();
     return 0;
 }
 

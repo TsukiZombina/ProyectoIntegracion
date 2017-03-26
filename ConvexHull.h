@@ -21,9 +21,11 @@ public:
     ConvexHull();
     ConvexHull(const ConvexHull& orig);
     virtual ~ConvexHull();
-//    std::vector<Coordinate> operator()(Map&);
+    void operator()(Map&, CoordinateSet&);
 private:
-    Coordinate anchor;
+    Coordinate anchor, tail;
+
+	bool isCCW(Coordinate a, Coordinate b, Coordinate c);
 };
 
 #endif /* CONVEXHULL_H */

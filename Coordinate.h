@@ -23,6 +23,7 @@ public:
     Coordinate();
     Coordinate(double a, double b):x(a),y(b){}
     double computeDistance(Coordinate);
+	bool operator==(const Coordinate&);
 private:
 };
 

@@ -37,12 +37,14 @@ public:
     void sortYX();
     void sortXthenY();
     typedef std::function<void(Map&)> SortAlgorithm;
-    CoordinateSetIterator begin(){return map.begin();}
-    CoordinateSetIterator end(){return map.end();}
+    CoordinateSetIterator begin(){return coordinateSet.begin();}
+    CoordinateSetIterator end(){return coordinateSet.end();}
     SortAlgorithm* getSortAlgorithm();
+	const CoordinateSet& getCoordinateSet();
+	CoordinateSetIterator erase(CoordinateSetIterator);
     
 private:
-    CoordinateSet map;
+    CoordinateSet coordinateSet;
     SortAlgorithm sortAlg[4];
 };
 
