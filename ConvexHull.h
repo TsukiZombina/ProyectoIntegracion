@@ -25,7 +25,9 @@ public:
 private:
     Coordinate anchor, tail;
 
-	bool isCCW(Coordinate a, Coordinate b, Coordinate c);
+	bool isCCW(Coordinate& a, Coordinate& b, Coordinate& c);
+	double cross(Coordinate & o, Coordinate & a, Coordinate & b);
+
 };
 
 #endif /* CONVEXHULL_H */

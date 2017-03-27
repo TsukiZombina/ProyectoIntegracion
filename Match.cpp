@@ -29,13 +29,13 @@ void Match::makeMatch(MatchSet& matchSet) {
 void Match::makeMatch(MatchSet & matchSet, CoordinateSet & convexHull)
 {
 	std::pair<Coordinate, Coordinate> match;
-	for (auto it = map.begin(); it != map.end() - 1; it++) {
+	for (auto it = convexHull.begin(); it != convexHull.end() - 1; it++) {
 		match.first = *it;
 		match.second = *(it + 1);
 		matchSet.push_back(match);
 	}
-	match.first = map.getCoordinateSet().back();
-	match.second = map.getCoordinateSet().front();
+	match.first = convexHull.back();
+	match.second = convexHull.front();
 	matchSet.push_back(match);
 }
 
@@ -81,7 +81,7 @@ void Match::computeWindroseMatches(){
     makeMatch(matchSets[3]);
     distances[3] = totalDistance(matchSets[3]);
 */
-    int matchSetIndex = std::distance(distances, std::max_element(distances, distances + 3));
+    auto matchSetIndex = std::distance(distances, std::max_element(distances, distances + 3));
     saveData(matchSets[matchSetIndex], ".wr");
 }
 
@@ -102,9 +102,11 @@ void Match::computeConvexHullMatches()
 		});
 		maxMatches.push_back(*it);
 		auto first = std::find(map.begin(), map.end(), it->first);
-		map.erase(first);
+		//if(first != map.end())
+			map.erase(first);
 		auto second = std::find(map.begin(), map.end(), it->second);
-		map.erase(second);
+		//if(second != map.end())
+			map.erase(second);
 		// TODO: change delete by pop_back
 	}
 	saveData(maxMatches, ".ch");
