@@ -36,6 +36,7 @@ public:
     void sortXY();
     void sortYX();
     void sortXthenY();
+	void pop_back();
     typedef std::function<void(Map&)> SortAlgorithm;
     CoordinateSetIterator begin(){return coordinateSet.begin();}
     CoordinateSetIterator end(){return coordinateSet.end();}

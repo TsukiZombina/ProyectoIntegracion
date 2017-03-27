@@ -102,11 +102,15 @@ void Match::computeConvexHullMatches()
 		});
 		maxMatches.push_back(*it);
 		auto first = std::find(map.begin(), map.end(), it->first);
+		std::iter_swap(map.end() - 1, first);
+		map.pop_back();
 		//if(first != map.end())
-			map.erase(first);
+			//map.erase(first);
 		auto second = std::find(map.begin(), map.end(), it->second);
+		std::iter_swap(map.end() - 1, second);
+		map.pop_back();
 		//if(second != map.end())
-			map.erase(second);
+			//map.erase(second);
 		// TODO: change delete by pop_back
 	}
 	saveData(maxMatches, ".ch");

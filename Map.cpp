@@ -80,3 +80,8 @@ void Map::sortXthenY(){
         return (a.x < b.x || (a.x == b.x && a.y < b.y));
     });
 }
+
+void Map::pop_back()
+{
+	coordinateSet.pop_back();
+}
